@@ -6,7 +6,7 @@ VIMRC_PATH="$HOME/.config/nvim/init.vim"
 function backup_file(){
     if test -e "$1"; then
         echo "Backup $1"
-        cp $1 "b.$2"
+        cp $1 "backup/b.$2"
     else
         echo "$1 not found"
     fi
