@@ -25,7 +25,14 @@ HIST_STAMPS="yyyy-mm-dd"
 # Standard plugins => $ZSH/plugins/
 # Custom plugins => $ZSH_CUSTOM/plugins/
 plugins=(
-	git
+	rust
+	sudo
+	asdf
+	docker
+	golang
+	python
+	history
+	docker-compose
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
@@ -41,17 +48,7 @@ source $ZSH/oh-my-zsh.sh
 alias explorer="explorer.exe"
 alias ls="logo-ls"
 alias cat="bat"
-alias vim="nvim"
 
-# FOR GO INSTALL PATH #
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/.go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# FOR NVM CONFIG #
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # FOR YARN BIN PATH #
 export PATH="$(yarn global bin):$PATH"

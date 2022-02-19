@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ZSHRC_PATH="$HOME/.zshrc"
-VIMRC_PATH="$HOME/.config/nvim/init.vim"
+#VIMRC_PATH="$HOME/.config/nvim/init.vim"
 
 function backup_file(){
     if test -e "$1"; then
@@ -13,4 +13,4 @@ function backup_file(){
 }
 
 backup_file "$ZSHRC_PATH" "zshrc"
-backup_file "$VIMRC_PATH" "vimrc"
+#backup_file "$VIMRC_PATH" "vimrc"
