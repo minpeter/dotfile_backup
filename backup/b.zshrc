@@ -22,9 +22,12 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # stamp shown in the history command output.
 HIST_STAMPS="yyyy-mm-dd"
 
+. $HOME/.asdf/asdf.sh
+
 # Standard plugins => $ZSH/plugins/
 # Custom plugins => $ZSH_CUSTOM/plugins/
 plugins=(
+	aws
 	rust
 	sudo
 	asdf
@@ -44,11 +47,12 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# FOR asdf java #
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+
 # FOR sortcut command #
 alias explorer="explorer.exe"
 alias ls="logo-ls"
-alias cat="bat"
 
-
-# FOR YARN BIN PATH #
-export PATH="$(yarn global bin):$PATH"
